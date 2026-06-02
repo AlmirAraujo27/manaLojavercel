@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>Mana Dreams - Salgados, Bebidas e Trufas</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Mana Dreams</h1>
+    <p>Salgados, Bebidas e Trufas fresquinhos para você!</p>
+  </header>
+
+  <section class="menu-section" id="salgados">
+    <h2>Salgados</h2>
+
+    <div class="item" data-name="Coxinha" data-price="6.50" data-tipo="simples">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Coxinha" />
+      <div class="item-info">
+        <h3>Coxinha</h3>
+        <p>Salgadinho frito com recheio de frango cremoso.</p>
+        <label>Qtd:</label>
+        <input type="number" min="1" value="1" class="quantity" />
+      </div>
+      <div class="price">R$ 6,50</div>
+      <button class="btn-add">Adicionar</button>
+    </div>
+
+    <div class="item" data-name="Empada" data-price="7.00" data-tipo="simples">
+      <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb6e?auto=format&fit=crop&w=800&q=80" alt="Empada" />
+      <div class="item-info">
+        <h3>Empada</h3>
+        <p>Salgadinho assado com recheio de palmito ou frango.</p>
+        <label>Qtd:</label>
+        <input type="number" min="1" value="1" class="quantity" />
+      </div>
+      <div class="price">R$ 7,00</div>
+      <button class="btn-add">Adicionar</button>
+    </div>
+  </section>
+
+  <section class="menu-section" id="bebidas">
+    <h2>Bebidas</h2>
+
+    <div class="item-group" id="refri-suco">
+      <h3>Refrigerantes e Sucos</h3>
+
+      <div class="item" data-name="Refrigerante" data-price350="7.00" data-price600="9.00" data-price1000="13.00" data-tipo="bebida-variada">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Refrigerante" />
+        <div class="item-info">
+          <h3>Refrigerante</h3>
+          <p>Escolha sabor e tamanho.</p>
+          <label>Sabor:</label>
+          <select class="refri-sabor">
+            <option value="Cola">Cola</option>
+            <option value="Guaraná">Guaraná</option>
+            <option value="Laranja">Laranja</option>
+            <option value="Limão">Limão</option>
+          </select>
+          <label>Tamanho:</label>
+          <select class="refri-tamanho">
+            <option value="350">350 ml - R$ 7,00</option>
+            <option value="600">600 ml - R$ 9,00</option>
+            <option value="1000">1 Litro - R$ 13,00</option>
+          </select>
+          <label>Qtd:</label>
+          <input type="number" min="1" value="1" class="quantity" />
+        </div>
+        <div class="price">R$ <span class="preco-atual">7,00</span></div>
+        <button class="btn-add">Adicionar</button>
+      </div>
+
+      <div class="item" data-name="Suco Natural" data-price350="8.00" data-price600="11.00" data-price1000="15.00" data-tipo="suco-variado">
+        <img src="https://images.unsplash.com/photo-1528821154947-1aa3f1ed4965?auto=format&fit=crop&w=800&q=80" alt="Suco Natural" />
+        <div class="item-info">
+          <h3>Suco Natural</h3>
+          <p>Escolha sabor e tamanho.</p>
+          <label>Sabor:</label>
+          <select class="suco-sabor">
+            <option value="Laranja">Laranja</option>
+            <option value="Maracujá">Maracujá</option>
+            <option value="Abacaxi">Abacaxi</option>
+            <option value="Melancia">Melancia</option>
+          </select>
+          <label>Tamanho:</label>
+          <select class="suco-tamanho">
+            <option value="350">350 ml - R$ 8,00</option>
+            <option value="600">600 ml - R$ 11,00</option>
+            <option value="1000">1 Litro - R$ 15,00</option>
+          </select>
+          <label>Qtd:</label>
+          <input type="number" min="1" value="1" class="quantity" />
+        </div>
+        <div class="price">R$ <span class="preco-atual">8,00</span></div>
+        <button class="btn-add">Adicionar</button>
+      </div>
+    </div>
+
+    <div class="item-group" id="energetico-geladinho">
+      <h3>Energético e Geladinho</h3>
+
+      <div class="item" data-name="Energético" data-price="12.00" data-tipo="sabor-unico">
+        <img src="https://images.unsplash.com/photo-1510626176961-4b6e2c7db04e?auto=format&fit=crop&w=800&q=80" alt="Energético" />
+        <div class="item-info">
+          <h3>Energético</h3>
+          <p>Escolha sabor.</p>
+          <label>Sabor:</label>
+          <select class="sabor-seletor">
+            <option value="Original">Original</option>
+            <option value="Tropical">Tropical</option>
+          </select>
+          <label>Qtd:</label>
+          <input type="number" min="1" value="1" class="quantity" />
+        </div>
+        <div class="price">R$ 12,00</div>
+        <button class="btn-add">Adicionar</button>
+      </div>
+
+      <div class="item" data-name="Geladinho" data-price="5.00" data-tipo="sabor-unico">
+        <img src="https://images.unsplash.com/photo-1601924766649-e04152a15322?auto=format&fit=crop&w=800&q=80" alt="Geladinho" />
+        <div class="item-info">
+          <h3>Geladinho</h3>
+          <p>Escolha sabor.</p>
+          <label>Sabor:</label>
+          <select class="sabor-seletor">
+            <option value="Morango">Morango</option>
+            <option value="Limão">Limão</option>
+            <option value="Chocolate">Chocolate</option>
+          </select>
+          <label>Qtd:</label>
+          <input type="number" min="1" value="1" class="quantity" />
+        </div>
+        <div class="price">R$ 5,00</div>
+        <button class="btn-add">Adicionar</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="trufas">
+    <h2>Trufas</h2>
+
+    <div class="item" data-name="Trufa" data-price="4.50" data-tipo="sabor-unico">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Trufa" />
+      <div class="item-info">
+        <h3>Trufa</h3>
+        <p>Escolha sabor.</p>
+        <label>Sabor:</label>
+        <select class="sabor-seletor">
+          <option value="Chocolate ao Leite">Chocolate ao Leite</option>
+          <option value="Branco">Chocolate Branco</option>
+          <option value="Amargo">Chocolate Amargo</option>
+          <option value="Avelã">Avelã</option>
+        </select>
+        <label>Qtd:</label>
+        <input type="number" min="1" value="1" class="quantity" />
+      </div>
+      <div class="price">R$ 4,50</div>
+      <button class="btn-add">Adicionar</button>
+    </div>
+  </section>
+
+  <section id="pedido-resumo">
+    <h2>Resumo do Pedido</h2>
+    <div id="resumo-itens">Nenhum item adicionado ao carrinho.</div>
+
+    <hr style="border: 0; border-top: 1px solid #ff6600; margin: 15px 0;">
+
+    <label for="pagamento">Forma de Pagamento:</label>
+    <select id="pagamento">
+      <option value="" selected disabled>Selecione</option>
+      <option value="credito">Cartão Crédito</option>
+      <option value="debito">Cartão Débito</option>
+      <option value="pix">Pix</option>
+      <option value="dinheiro">Dinheiro</option>
+    </select>
+
+    <div id="troco-container">
+      <label for="troco">Quanto vai pagar em dinheiro? (Para calcular o troco)</label>
+      <input type="number" id="troco" min="0" step="0.01" />
+    </div>
+
+    <p style="font-size: 1.3em;"><strong>Total:</strong> R$ <span id="total">0,00</span></p>
+
+    <button id="enviar-pedido" class="btn-enviar">Enviar pedido via WhatsApp</button>
+  </section>
+
+  <footer>
+    &copy; 2026 Mana Dreams - Todos os direitos reservados
+  </footer>
+
+  <script>
+    // Array global que guardará os produtos adicionados no carrinho
+    let carrinho = [];
+
+    const resumoItens = document.getElementById('resumo-itens');
+    const totalEl = document.getElementById('total');
+    const pagamentoSelect = document.getElementById('pagamento');
+    const trocoContainer = document.getElementById('troco-container');
+    const trocoInput = document.getElementById('troco');
+    const enviarPedidoBtn = document.getElementById('enviar-pedido');
+
+    function formatBRL(value) {
+      return value.toFixed(2).replace('.', ',');
+    }
+
+    // Monitora a mudança de tamanho nas bebidas para atualizar o preço de exibição na tela
+    document.querySelectorAll('.refri-tamanho, .suco-tamanho').forEach(select => {
+      select.addEventListener('change', e => {
+        const item = e.target.closest('.item');
+        const tamanho = e.target.value;
+        const preco = parseFloat(item.dataset[`price${tamanho}`]) || 0;
+        item.querySelector('.preco-atual').textContent = formatBRL(preco);
+      });
+    });
+
+    // Escuta o clique em qualquer botão "Adicionar"
+    document.querySelectorAll('.btn-add').forEach(botao => {
+      botao.addEventListener('click', e => {
+        const itemEl = e.target.closest('.item');
+        const qty = parseInt(itemEl.querySelector('.quantity').value) || 0;
+
+        if (qty <= 0) {
+          alert('Por favor, insira uma quantidade válida.');
+          return;
+        }
+
+        let nomeFinal = itemEl.dataset.name;
+        let precoUnitario = 0;
+        const tipo = itemEl.dataset.tipo;
+
+        // Captura as variações dependendo do tipo do produto
+        if (tipo === 'bebida-variada') {
+          const sabor = itemEl.querySelector('.refri-sabor').value;
+          const tamanho = itemEl.querySelector('.refri-tamanho').value;
+          nomeFinal += ` (${sabor} - ${tamanho}ml)`;
+          precoUnitario = parseFloat(itemEl.dataset[`price${tamanho}`]);
+        } 
+        else if (tipo === 'suco-variado') {
+          const sabor = itemEl.querySelector('.suco-sabor').value;
+          const tamanho = itemEl.querySelector('.suco-tamanho').value;
+          nomeFinal += ` (${sabor} - ${tamanho}ml)`;
+          precoUnitario = parseFloat(itemEl.dataset[`price${tamanho}`]);
+        } 
+        else if (tipo === 'sabor-unico') {
+          const sabor = itemEl.querySelector('.sabor-seletor').value;
+          nomeFinal += ` (${sabor})`;
+          precoUnitario = parseFloat(itemEl.dataset.price);
+        } 
+        else {
+          // Itens simples (Ex: Coxinha, Empada)
+          precoUnitario = parseFloat(itemEl.dataset.price);
+        }
+
+        // Verifica se exatamente esse item (mesmo sabor/tamanho) já está no carrinho
+        const itemExistente = carrinho.find(prod => prod.nome === nomeFinal);
+
+        if (itemExistente) {
+          itemExistente.quantidade += qty;
+        } else {
+          carrinho.push({
+            nome: nomeFinal,
+            preco: precoUnitario,
+            quantidade: qty
+          });
+        }
+
+        // Reseta o campo de quantidade do menu para 1 após adicionar
+        itemEl.querySelector('.quantity').value = 1;
+
+        atualizarInterfaceCarrinho();
+      });
+    });
+
+    // Updates visual list of cart and total price
+    function atualizarInterfaceCarrinho() {
+      if (carrinho.length === 0) {
+        resumoItens.innerHTML = 'Nenhum item adicionado ao carrinho.';
+        totalEl.textContent = '0,00';
+        return;
+      }
+
+      let HTMLResumo = '';
+      let totalGeral = 0;
+
+      carrinho.forEach((item, index) => {
+        const subtotal = item.preco * item.quantidade;
+        totalGeral += subtotal;
+
+        HTMLResumo += `
+          <div class="carrinho-item">
+            <div>
+              <strong>${item.quantidade}x</strong> ${item.nome} <br>
+              <span style="color:#777; font-size:0.9em;">Unitário: R$ ${formatBRL(item.preco)}</span>
+            </div>
+            <div style="text-align: right;">
+              <span style="font-weight:bold; margin-right: 10px;">R$ ${formatBRL(subtotal)}</span>
+              <button class="btn-remover" onclick="removerDoCarrinho(${index})">X</button>
+            </div>
+          </div>
+        `;
+      });
+
+      resumoItens.innerHTML = HTMLResumo;
+      totalEl.textContent = formatBRL(totalGeral);
+    }
+
+    // Função global chamada pelo botão "X" do carrinho para remover itens
+    window.removerDoCarrinho = function(index) {
+      carrinho.splice(index, 1);
+      atualizarInterfaceCarrinho();
+    };
+
+    // Mostra ou esconde o campo de troco com base na forma de pagamento
+    pagamentoSelect.addEventListener('change', () => {
+      if (pagamentoSelect.value === 'dinheiro') {
+        trocoContainer.style.display = 'block';
+      } else {
+        trocoContainer.style.display = 'none';
+        trocoInput.value = '';
+      }
+    });
+
+    // Envia a lista do carrinho formatada para o WhatsApp
+    enviarPedidoBtn.addEventListener('click', () => {
+      if (carrinho.length === 0) {
+        alert('Seu carrinho está vazio! Adicione pelo menos um item primeiro.');
+        return;
+      }
+
+      const formaPagamento = pagamentoSelect.value;
+      if (!formaPagamento) {
+        alert('Por favor, selecione a forma de pagamento.');
+        return;
+      }
+
+      let totalGeral = carrinho.reduce((soma, item) => soma + (item.preco * item.quantidade), 0);
+      let valorDinheiro = 0;
+
+      if (formaPagamento === 'dinheiro') {
+        valorDinheiro = parseFloat(trocoInput.value);
+        if (isNaN(valorDinheiro) || valorDinheiro < totalGeral) {
+          alert(`Informe um valor em dinheiro maior ou igual ao total do pedido (R$ ${formatBRL(totalGeral)})`);
+          return;
+        }
+      }
+
+      // Montagem do texto do WhatsApp
+      let mensagem = 'Olá, gostaria de fazer o seguinte pedido:%0A%0A';
+
+      carrinho.forEach(item => {
+        const subtotal = item.preco * item.quantidade;
+        mensagem += `${item.quantidade} x ${item.nome} - R$ ${formatBRL(subtotal)}%0A`;
+      });
+
+      mensagem += `%0ATotal: R$ ${formatBRL(totalGeral)}%0A`;
+
+      const traduzirPagamento = {
+        credito: 'Cartão Crédito',
+        debito: 'Cartão Débito',
+        pix: 'Pix',
+        dinheiro: 'Dinheiro'
+      };
+      mensagem += `Forma de pagamento: ${traduzirPagamento[formaPagamento]}%0A`;
+
+      if (formaPagamento === 'dinheiro') {
+        mensagem += `Valor entregue: R$ ${formatBRL(valorDinheiro)}%0A`;
+        mensagem += `Troco: R$ ${formatBRL(valorDinheiro - totalGeral)}%0A`;
+      }
+
+      const telefoneLoja = '5571999537511';
+      const url = `https://wa.me/${telefoneLoja}?text=${mensagem}`;
+      
+      window.open(url, '_blank');
+    });
+  </script>
+
+</body>
+
+</html>
